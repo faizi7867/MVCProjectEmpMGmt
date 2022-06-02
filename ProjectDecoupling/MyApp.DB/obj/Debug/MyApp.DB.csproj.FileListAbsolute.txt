@@ -1,0 +1,14 @@
+C:\Users\Palle\source\repos\MVC\ProjectDecoupling\MyApp.DB\bin\Debug\MyApp.DB.dll.config
+C:\Users\Palle\source\repos\MVC\ProjectDecoupling\MyApp.DB\bin\Debug\MyApp.DB.dll
+C:\Users\Palle\source\repos\MVC\ProjectDecoupling\MyApp.DB\bin\Debug\MyApp.DB.pdb
+C:\Users\Palle\source\repos\MVC\ProjectDecoupling\MyApp.DB\bin\Debug\EntityFramework.dll
+C:\Users\Palle\source\repos\MVC\ProjectDecoupling\MyApp.DB\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Palle\source\repos\MVC\ProjectDecoupling\MyApp.DB\bin\Debug\EntityFramework.xml
+C:\Users\Palle\source\repos\MVC\ProjectDecoupling\MyApp.DB\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Palle\source\repos\MVC\ProjectDecoupling\MyApp.DB\obj\Debug\MyApp.DB.csprojAssemblyReference.cache
+C:\Users\Palle\source\repos\MVC\ProjectDecoupling\MyApp.DB\obj\Debug\MyApp.DB.csproj.CoreCompileInputs.cache
+C:\Users\Palle\source\repos\MVC\ProjectDecoupling\MyApp.DB\obj\Debug\MyApp.DB.csproj.CopyComplete
+C:\Users\Palle\source\repos\MVC\ProjectDecoupling\MyApp.DB\obj\Debug\MyApp.DB.dll
+C:\Users\Palle\source\repos\MVC\ProjectDecoupling\MyApp.DB\obj\Debug\MyApp.DB.pdb
+C:\Users\Palle\source\repos\MVC\ProjectDecoupling\MyApp.DB\bin\Debug\MyApp.Model.dll
+C:\Users\Palle\source\repos\MVC\ProjectDecoupling\MyApp.DB\bin\Debug\MyApp.Model.pdb

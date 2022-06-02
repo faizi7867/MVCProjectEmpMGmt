@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EmployeeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Address">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="details" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="state" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="country" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="employee" Relationship="Self.FK__employee__addres__74AE54BC" FromRole="Address" ToRole="employee" />
+  </EntityType>
+  <EntityType Name="employee">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="firstname" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="lastname" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="addressid" Type="Int32" />
+    <Property Name="code" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Address" Relationship="Self.FK__employee__addres__74AE54BC" FromRole="employee" ToRole="Address" />
+  </EntityType>
+  <Association Name="FK__employee__addres__74AE54BC">
+    <End Role="Address" Type="Self.Address" Multiplicity="0..1" />
+    <End Role="employee" Type="Self.employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Address">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="employee">
+        <PropertyRef Name="addressid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="EmployeeDbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Address" EntityType="Self.Address" />
+    <EntitySet Name="employee" EntityType="Self.employee" />
+    <AssociationSet Name="FK__employee__addres__74AE54BC" Association="Self.FK__employee__addres__74AE54BC">
+      <End Role="Address" EntitySet="Address" />
+      <End Role="employee" EntitySet="employee" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

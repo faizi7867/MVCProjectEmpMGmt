@@ -1,0 +1,5 @@
+C:\Users\Palle\source\repos\MVC\ProjectDecoupling\MyApp.Model\bin\Debug\MyApp.Model.dll
+C:\Users\Palle\source\repos\MVC\ProjectDecoupling\MyApp.Model\bin\Debug\MyApp.Model.pdb
+C:\Users\Palle\source\repos\MVC\ProjectDecoupling\MyApp.Model\obj\Debug\MyApp.Model.csproj.CoreCompileInputs.cache
+C:\Users\Palle\source\repos\MVC\ProjectDecoupling\MyApp.Model\obj\Debug\MyApp.Model.dll
+C:\Users\Palle\source\repos\MVC\ProjectDecoupling\MyApp.Model\obj\Debug\MyApp.Model.pdb
