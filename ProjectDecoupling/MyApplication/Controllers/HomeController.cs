@@ -55,7 +55,7 @@ namespace MyApplication.Controllers
         {
             if (ModelState.IsValid)
             {
-                er.UpdateEmployee(model.id, model);
+                er.UpdateEmployee(model);
                 return RedirectToAction("GetAllEmployees");
             }
             return View();

@@ -25,7 +25,7 @@ namespace MyApp.DB.DbOperations
                      code = model.code,
 
                 };
-                if (emp.Address != null)
+                if (model.address != null)
                 {
                     emp.Address = new Address()
                     {
@@ -94,33 +94,34 @@ namespace MyApp.DB.DbOperations
             }
         }
 
-        public bool UpdateEmployee(int id,EmpModel model)
+        public bool UpdateEmployee(EmpModel model)
         {
             using (var context = new EmployeeDbEntities())
             {
-                var employee = context.employee.FirstOrDefault(x => x.id == id);
-                if (employee != null)
-                {
-                    employee.firstname = model.firstname;
-                    employee.lastname = model.lastname;
-                    employee.email = model.email;
-                    employee.code = model.code;
-                }
+                var employee = new employee();
+                employee.id = model.id;
+                employee.firstname = model.firstname;
+                employee.lastname = model.lastname;
+                employee.email = model.email;
+                employee.code = model.code;
+                employee.addressid = model.addressid;
+
+                context.Entry(employee).State = System.Data.Entity.EntityState.Modified;
                 context.SaveChanges();
                 return true;
             }
         }
-        public bool DeleteEmployee(int id)
+        public bool DeleteEmployee(int Id)
         {
             using (var context = new EmployeeDbEntities())
             {
-                var employee = context.employee.FirstOrDefault(x => x.id == id);
-                if (employee != null)
+
+                var emp = new employee()
                 {
-                    context.employee.Remove(employee);
-                    context.SaveChanges();
-                    return true;
-                }
+                    id = Id
+                };
+                context.Entry(emp).State = System.Data.Entity.EntityState.Deleted;
+                context.SaveChanges();
                 return false;
             }
         }
